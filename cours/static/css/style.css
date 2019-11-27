@@ -1,0 +1,158 @@
+/* Google font */
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,600,600i,700,700i,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sniglet&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Partie Header */
+
+header {
+    overflow-x: hidden;
+}
+
+header {
+    background:  rgb(110, 25, 194);
+    background: linear-gradient(bottom, #5a0cdd, #ff0fe6);
+}
+
+header a {
+    font-family: "Titillium web", sans-serif;
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: white;
+}
+
+header h2 {
+    font-family: "Titillium web", sans-serif;
+    font-weight: bold;
+    font-size: 1.9em;
+    color: whitesmoke;
+}
+
+header .nav-item {
+    padding: 0.3em;
+}
+
+header .nav-item i {
+    padding: 0.5em;
+}
+
+header .nav-item:hover {
+    background: white;
+    transition: 0.5s;
+    color: #3D1169;
+}
+
+header .navbar-brand {
+    padding-left: 0.5rem;
+}
+
+header .navbar-brand a {
+    font-size: 0.9em;
+}
+
+header .row .col-md-5 {
+    padding: 4.2vmin 1vmin;
+}
+
+header .row .col-md-7 {
+    padding: 18vmin 1vmin;
+    padding-bottom: 35vmin;
+    font-size: 1.2em;
+}
+
+header .row .col-md-5 img {
+    width: 90%;
+}
+
+header .container .col-md-7 h2 {
+    padding: 1vmin;
+    font-weight: bold;
+    text-align: left;
+}
+
+header .container .col-md-7 button {
+    border-radius: 30px;
+}
+
+
+/*Partie Slider*/
+
+.fluid_container {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+/*End Partie Slider*/
+
+
+/* List Cours Page*/
+
+
+/* List Cours Page*/
+
+
+/*Instructor UI*/
+
+.sidebar-wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 20%;
+    height: 100vh;
+    background: #3d1169;
+    overflow-y: hidden;
+    opacity: 0.9;
+    border: 2px solid #3D1169;
+}
+
+
+/*Partie footer*/
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    padding: 10vmin 8vmin;
+    position: relative;
+}
+
+footer .row .col-md-4 h5 {
+    color: white;
+}
+
+footer input {
+    border: none !important;
+}
+
+footer input::placeholder {
+    color: white !important;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+footer.input-group.input-group-text {
+    background: linear-gradient(bottom, #5a0cdd, #ff0fe6);
+    ;
+}
+
+footer .row.col-md-3.nav.nav-link a {
+    color: whitesmoke;
+}
+.inner{
+    overflow: hidden;
+}
+.inner img{
+    transition: all 1.5s ease;
+}
+
+.inner:hover img{
+    transform: scale(1.5);
+}
+

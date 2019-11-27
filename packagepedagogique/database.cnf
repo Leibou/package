@@ -1,0 +1,5 @@
+[client]
+database = "packagepedagogiques"
+user = "root"
+password = "passer123"
+default-character-set = utf8

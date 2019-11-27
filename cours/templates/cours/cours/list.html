@@ -1,0 +1,126 @@
+{% extends 'base.html' %} {% load staticfiles %} {% block content %}
+<style>
+body{
+    background: #fefefe;
+}
+.card{
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    width: 100%;
+}
+.card:hover{
+    border: 1px solid #eee;
+}
+.inner{
+    overflow: hidden;
+}
+.inner img{
+    transition: all .5s ease;
+}
+
+.inner:hover img{
+    transform: scale(1.5);
+}
+@keyframes anim{
+    0%{
+        transform: translate3d(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(0);
+        opacity: 0;
+    }
+}
+/* presentation */
+
+.presentation{
+    background: rgb(110, 25, 194);
+}
+.underline{
+    width: 150px;
+    border: 2px solid #fff;
+    margin: auto;
+}
+
+.underline-tcours{
+    width: 150px;
+    border: 2px solid rgb(102, 12, 187);
+    margin: auto;
+}
+
+
+
+/* End presentation */
+</style>
+<section class="p-sm-5 p-2 course-section">
+    <div class="container-fluid">
+        <!-- Titre Section Cours -->
+        <div class="row">
+            <div class="col text-center mb-3">
+                <h1 class="display-6 font-weight-normal">
+                    Cours disponibles
+                </h1>
+                <div class="underline-tcours mb-4"></div>
+            </div>
+            <hr>
+        </div>
+        <div class="row justify-content-left">
+            {% for cours in listcours %}
+            <div class="col-md-4">
+                <div class="card mt-3 shadow" style="width: 22rem;">
+                    <div class="inner">
+                    <img src="{%static "images/DB.jpg"%}" alt="Image du cours" class="card-img-top">
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="card-title">
+                            <h3 class="card-title"><a href="{% url "cours_detail" cours.slug%}">{{cours.nom}}</a></h3>
+                        </div>
+                        <div class="card-subtitle">
+                            <p class=" card-text">{{cours.description}}</p>
+                        <p class="text-left">Auteur: {{cours.auteur.get_full_name}}</p>
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-success" href="">Voir le cours</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</section>
+<section class="p-5 presentation">
+    <div class="container-fluid">
+        <div class="row text-white text-center">
+            <div class="col m-4">
+                <h3 class="display-8 mb-4">La solution aux problèmes de Connectivité</h3>
+                <div class="underline mb-4"></div>
+                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro illo iusto beatae suscipit doloremque quas eum totam facere soluta laborum?</p>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-4 text-center">
+                <i class="fa fa-cogs fa-5x mb-4 text-white"></i>
+                <h1 class="text-white mb-3">Interactivité</h1>
+                <p class="text-muted">
+                    Traiter vos activités pédagogiques comme si vous êtiez connecté à internet
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                    <i class="fa fa-cogs fa-5x mb-4 text-white"></i>
+                    <h1 class="text-white mb-3">Interactivité</h1>
+                    <p class="text-muted">
+                        Traiter vos activités pédagogiques comme si vous êtiez connecté à internet
+                    </p>
+            </div>
+            <div class="col-md-4 text-center">
+                    <i class="fa fa-cogs fa-5x mb-4 text-white"></i>
+                    <h1 class="text-white mb-3">Interactivité</h1>
+                    <p class="text-muted">
+                        Traiter vos activités pédagogiques comme si vous êtiez connecté à internet
+                    </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,5 +1,5 @@
 astroid==2.2.5
-Django==2.1.5
+Django==2.2.13
 django-alert==0.8.1
 django-crispy-forms==1.7.2
 django-master==0.1.20
